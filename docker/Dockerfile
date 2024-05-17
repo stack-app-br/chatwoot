@@ -75,6 +75,9 @@ RUN rm -rf /gems/ruby/3.2.0/cache/*.gem \
 # final build stage
 FROM ruby:3.2.2-alpine3.18
 
+LABEL org.opencontainers.image.source=https://github.com/stack-app-br/chatwoot
+LABEL org.opencontainers.image.description="Chatwoot Brasil"
+LABEL org.opencontainers.image.licenses=MIT
 
 ARG BUNDLE_WITHOUT="development:test"
 ENV BUNDLE_WITHOUT ${BUNDLE_WITHOUT}
